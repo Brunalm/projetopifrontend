@@ -1,14 +1,14 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
-import { AuthContext } from '../../contexts/auth';
+import { useAuth } from '../../contexts/auth';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
-    const { user, login } = useContext(AuthContext);
+    const { user, login } = useAuth();
 
     const history = useHistory();
 

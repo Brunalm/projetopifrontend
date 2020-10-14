@@ -4,7 +4,7 @@ import { useAuth } from '../../contexts/auth';
 
 export default function New() {
 
-    const { user, login, logout } = useAuth();
+    const { user } = useAuth();
 
     console.log(user);
 

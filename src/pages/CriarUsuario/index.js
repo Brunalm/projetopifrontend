@@ -14,7 +14,7 @@ function CriarUsuario() {
   async function handleSubmit(event) {
     event.preventDefault();
 
-    const response = await api.post('/login', {
+    const response = await api.post('/usuarios', {
       nome,
       sobrenome,
       email,
