@@ -35,7 +35,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const storagedData = getStorageData();
 
-    if (!storagedData.user && !storagedData.token) {
+    if (!storagedData.user || !storagedData.token) {
       console.log('Precisa fazer login');
     } else {
       const user = JSON.parse(storagedData.user);
