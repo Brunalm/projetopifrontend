@@ -59,7 +59,7 @@ function CriarUsuario() {
           />
 
           <label htmlFor="senha">SENHA *</label>
-          <input type="senha" id="senha"
+          <input type="password" id="senha"
             placeholder="Escolha uma senha"
             value={senha}
             onChange={event => setSenha(event.target.value)}

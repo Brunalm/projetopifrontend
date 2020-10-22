@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import './styles.css';
+import logo from '../../assets/logo.svg';
+
 import api from '../../services/api';
 import { useAuth } from '../../contexts/auth';
 
@@ -32,20 +35,34 @@ export default function Login() {
     }, [user, history]);
 
     return (
-        <div className="login-container">
-            <form className="login-form" onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                />
-                <input
-                    type="text"
-                    value={senha}
-                    onChange={e => setSenha(e.target.value)}
-                />
-                <button type="submit">Logar</button>
-            </form>
-        </div>
+        <div className="container">
+        <img src={logo} alt="AirCnc" />
+
+        <div className="content">
+        <p>
+            Entrar na conta
+        </p>
+
+        <form onSubmit={handleSubmit}>
+        <label htmlFor="email">E-MAIL *</label>
+          <input
+            type="email" id="email"
+            placeholder="Digite seu e-mail"
+            value={email}
+            onChange={event => setEmail(event.target.value)}
+          />
+
+          <label htmlFor="senha">SENHA *</label>
+          <input type="password" id="senha"
+            placeholder="Digite sua senha"
+            value={senha}
+            onChange={event => setSenha(event.target.value)}
+          />
+
+          <button className="btn" type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+
     )
 }
