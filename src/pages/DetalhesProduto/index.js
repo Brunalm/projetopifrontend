@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import api from '../../services/api';
 
+import FotosProduto from '../../components/FotosProduto';
+
 export default function DetalhesProduto() {
     const params = useParams();
 
@@ -17,20 +19,22 @@ export default function DetalhesProduto() {
         }
 
         loadProduto();
-    },[params.id]);
+    }, [params.id]);
 
     return (
         <div className="detalhes-produto-container">
             {
                 produto
                     ? (
-                    <>
-                    <span className="nome">{produto.nome}</span>
-                    </>
+                        <>
+                            <span className="nome">{produto.nome}</span>
+
+                            <FotosProduto />
+                        </>
                     )
                     : <span>carregando...</span>
             }
         </div>
     )
-    
+
 }
