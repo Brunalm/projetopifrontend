@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Produto from './pages/Produto';
 import CriarUsuario from './pages/CriarUsuario';
 import DetalhesProduto from './pages/DetalhesProduto';
+import NovoProduto from './pages/NovoProduto';
 
 export default function Routes() {
     return (
@@ -14,6 +15,7 @@ export default function Routes() {
                 <Route path="/criar-usuario" component={CriarUsuario} />
                 <Route path="/produtos" exact component={Produto} />
                 <Route path="/produtos/:id" component={DetalhesProduto}/>
+                <Route path="/criar-produto" component={NovoProduto}/>
             </Switch>
         </BrowserRouter>
     );

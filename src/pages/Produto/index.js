@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import api from '../../services/api';
 
 import './styles.css';
@@ -19,10 +20,17 @@ export default function Produto() {
     }, []);
 
     return (
-        <div className="container">
+        <div className="produto-container">
+            
             <ul className="produtos-list">
                 {produtos.map(produto => (
                     <li key={produto.id}>
+                        <button className="left">
+                            <FiChevronLeft size={28} />
+                        </button>
+                        <button className="right">
+                            <FiChevronRight size={28} />
+                        </button>
                         <header 
                             onClick={() => history.push(`/produtos/${produto.id}`)}
                             style={{ backgroundImage: `url(${produto.fotos[0] && produto.fotos[0].url})`}}/>
@@ -33,7 +41,12 @@ export default function Produto() {
                         <span>{`R$${produto.preco}`}</span>
                     </li>
                 ))}
-            </ul>   
+            </ul> 
+
+            <button className="btn" type="submit">
+                <Link to="/criar-produto">Cadastrar Produto</Link>
+            </button>
+        
         </div>
     )
 }

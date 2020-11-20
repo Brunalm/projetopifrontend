@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import './styles.css';
-import logo from '../../assets/logo.svg';
 
 import api from '../../services/api';
 
@@ -25,10 +24,8 @@ function CriarUsuario() {
   }
 
   return (
-    <div className="container">
-      <img src={logo} alt="AirCnc" />
-
-      <div className="content">
+    <div className="usuario-container">
+      <div className="usuario-content">
         <p>
           Criar uma nova conta
       </p>
@@ -37,6 +34,8 @@ function CriarUsuario() {
           <label htmlFor="nome">NOME *</label>
           <input
             type="nome" id="nome"
+            required="required"
+            autoFocus="autofocus"
             placeholder="Digite seu nome"
             value={nome}
             onChange={event => setNome(event.target.value)}
@@ -53,13 +52,16 @@ function CriarUsuario() {
           <label htmlFor="email">E-MAIL *</label>
           <input
             type="email" id="email"
+            required="required"
             placeholder="Seu melhor e-mail"
             value={email}
             onChange={event => setEmail(event.target.value)}
           />
 
           <label htmlFor="senha">SENHA *</label>
-          <input type="password" id="senha"
+          <input 
+            type="password" id="senha"
+            required="required"
             placeholder="Escolha uma senha"
             value={senha}
             onChange={event => setSenha(event.target.value)}

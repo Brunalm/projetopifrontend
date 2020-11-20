@@ -15,6 +15,7 @@ body,
 
 body {
   background: #c0c0c0;
+  background-size: cover;
   -webkit-font-smoothing: antialiased !important;
 }
 

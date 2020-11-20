@@ -1,0 +1,49 @@
+.fotos-produto-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.fotos-produto-container .foto-atual-container {
+    min-width: 500px;
+    max-width: 500px;
+    height: 100%;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fotos-produto-container .foto-atual-container img.foto-atual {
+    width: 420px;
+    height: 500px;
+    object-fit: fill;
+}
+
+.fotos-produto-container .foto-atual-container button {
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border: 0;
+    background: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.fotos-produto-container .foto-atual-container:hover button {
+    opacity: 1;
+}
+
+.fotos-produto-container .foto-atual-container button.left {
+    left: 0;
+}
+
+.fotos-produto-container .foto-atual-container button.right {
+    right: 0;
+}

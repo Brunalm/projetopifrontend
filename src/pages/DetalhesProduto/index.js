@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import api from '../../services/api';
 
+import './styles.css';
+
 import FotosProduto from '../../components/FotosProduto';
 
 export default function DetalhesProduto() {
@@ -27,9 +29,21 @@ export default function DetalhesProduto() {
                 produto
                     ? (
                         <>
-                            <span className="nome">{produto.nome}</span>
-
-                            <FotosProduto />
+                            <aside id="direita">
+                                <FotosProduto fotos={produto.fotos}/>
+                            </aside> 
+                            <main>
+                                <ul>
+                                    <li>
+                                        <strong>{produto.nome}</strong>
+                                        <span>{`R$${produto.preco}`}</span>
+                                        <span>{produto.tamanho}</span>
+                                    </li>
+                                </ul>  
+                            </main>
+                            <aside id="direita">
+                            {produto.descricao}
+                            </aside>
                         </>
                     )
                     : <span>carregando...</span>

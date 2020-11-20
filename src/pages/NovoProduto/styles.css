@@ -1,0 +1,83 @@
+.novo-produto-container {
+    margin: 80px auto;
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.novo-produto-content {
+    width: 100%;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.novo-produto-content > p {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+}
+  
+.novo-produto-content form {
+    display: flex;
+    flex-direction: column;
+}
+.novo-produto-content form label {
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+label#foto {
+    margin-top: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer;
+    height: 160px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label#foto input {
+    display: none;
+}
+
+label#foto.has-foto {
+    border: 0;
+} 
+
+label#foto.has-foto img {
+    display: none;
+}
+
+.novo-produto-content form input {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    height: 45px;
+    padding: 0 15px;
+    font-size: 14px;
+}
+  
+.novo-produto-content button.btn {
+    border: 0;
+    border-radius: 2px;
+    width: 100%;
+    height: 42px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #014408;
+    color: #fff;
+    cursor: pointer;
+}
+  
+.novo-produto-content button.btn:hover {
+    background: #013005;
+}

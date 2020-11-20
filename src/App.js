@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.css';
+import Header from './components/Header';
 
 //contexto de autenticação
 //contexto = estado compartilhado com componentes filhos 
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <AuthProvider>
+      <Header />
       <Routes />
     </AuthProvider>
   );
