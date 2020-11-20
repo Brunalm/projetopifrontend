@@ -36,7 +36,8 @@ export function AuthProvider({ children }) {
     const storagedData = getStorageData();
 
     if (!storagedData.user || !storagedData.token) {
-      console.log('Precisa fazer login');
+      // console.log('Precisa fazer login');
+      setUser(null);
     } else {
       const user = JSON.parse(storagedData.user);
       setUser(user);
