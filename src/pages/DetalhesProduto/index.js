@@ -24,31 +24,37 @@ export default function DetalhesProduto() {
     }, [params.id]);
 
     return (
+        <body>
         <div className="detalhes-produto-container">
-            {
-                produto
-                    ? (
-                        <>
-                            <aside id="direita">
-                                <FotosProduto fotos={produto.fotos}/>
-                            </aside> 
-                            <main>
-                                <ul>
-                                    <li>
-                                        <strong>{produto.nome}</strong>
-                                        <span>{`R$${produto.preco}`}</span>
-                                        <span>{produto.tamanho}</span>
-                                    </li>
-                                </ul>  
-                            </main>
-                            <aside id="direita">
-                            {produto.descricao}
-                            </aside>
-                        </>
-                    )
-                    : <span>carregando...</span>
+            {produto ? (
+                <>
+                <div id="esquerda"> 
+                    <FotosProduto fotos={produto.fotos}/>
+                </div> 
+                <div id="direita">
+                    <div id="descricoes">
+                        <form id="form-descricao">
+                        <ul>
+                        <li>
+                            <h1>{produto.nome}</h1>
+                                <div id="price">
+                                    <h3 id="h3-price">{`R$${produto.preco}`}</h3>
+                                </div>
+                                    <div id="desc">
+                                        <p>{produto.descricao}</p>
+                                        <p>{produto.tamanho}</p>
+                                    </div>
+                        </li>
+                        </ul>  
+                        </form>
+                    </div>
+                </div>
+                </>
+                )
+                : <span>carregando...</span>
             }
         </div>
+        </body>
     )
 
 }

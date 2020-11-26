@@ -3,6 +3,7 @@ import React, { useState, useMemo } from 'react';
 import camera from '../../assets/camera.svg';
 
 import './styles.css';
+import api from '../../services/api';
 
 export default function NovoProduto() {
     const [foto, setFoto] = useState(null);
@@ -16,9 +17,20 @@ export default function NovoProduto() {
         return foto ? URL.createObjectURL(foto) : null;
     }, [foto])
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
-    };
+    
+        const response = await api.post('/criar-produto', {
+          foto,
+          nome,
+          descricao,
+          cor,
+          tamanho,
+          preco
+        });
+    
+        console.log(response);
+      }
 
     return (
         <div className="novo-produto-container">
