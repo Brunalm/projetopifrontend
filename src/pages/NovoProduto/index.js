@@ -19,15 +19,20 @@ export default function NovoProduto() {
 
     async function handleSubmit(event) {
         event.preventDefault();
+        const formData = new FormData();
+        formData.append('fotos', foto);
     
-        const response = await api.post('/criar-produto', {
-          foto,
+        const response = await api.post('/produtos', {
+          ...formData,
           nome,
           descricao,
           cor,
           tamanho,
           preco
-        });
+        },
+        {
+            
+          },);
     
         console.log(response);
       }
