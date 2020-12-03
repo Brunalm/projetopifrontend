@@ -25,6 +25,7 @@ export default function Produto() {
             <ul className="produtos-list">
                 {produtos.map(produto => (
                     <li key={produto.id}>
+                        <div className="produto-foto-container">
                         <button className="left">
                             <FiChevronLeft size={28} />
                         </button>
@@ -34,10 +35,8 @@ export default function Produto() {
                         <header 
                             onClick={() => history.push(`/produtos/${produto.id}`)}
                             style={{ backgroundImage: `url(${produto.fotos[0] && produto.fotos[0].url})`}}/>
+                        </div>
                         <strong>{produto.nome}</strong>
-                        <span>{produto.descricao}</span>
-                        <span>{produto.cor}</span>
-                        <span>{produto.tamanho}</span>
                         <span>{`R$${produto.preco}`}</span>
                     </li>
                 ))}

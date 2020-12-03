@@ -8,6 +8,7 @@
 
 .produto-container header {
     cursor: pointer;
+    max-width: calc(100% - 56px);
 }
 
 .produto-container ul.produtos-list {
@@ -43,6 +44,33 @@
     color: #999;
 }
 
+.produto-container .produto-foto-container {
+    position: relative;
+    width: 100%; /*ocupa todo o espaço possivel*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.produto-foto-container button.left {
+    left: 0;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.produto-foto-container button.right {
+    right: 0;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.produto-foto-container button {
+    position: absolute; /*ajusta o botão relativo ao container*/
+    width: 28px; /*tamanho das setas*/
+    height: 28px;
+}
+
 .produto-container button.btn {
     border: 0;
     border-radius: 2px;
@@ -57,6 +85,10 @@
 
 .produto-container button.btn:hover {
     background: #013005;
+}
+
+.produto-container .produto-foto-container:hover button {
+    opacity: 1;
 }
 
 .produto-container a {
