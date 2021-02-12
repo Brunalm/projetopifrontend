@@ -1,0 +1,99 @@
+.footer {
+    background-color: #363636;
+    align-self: center;
+    width: 100vw; /*ocupa toda a largura da tela*/
+    display: flex; /*empilhar os itens*/
+    align-items: center; 
+    justify-content: space-between;
+    opacity: 0.9;
+    position: -webkit-sticky; /* Necessário para funcionar no Safari */
+    position: sticky;
+    top: 0;
+    z-index: 5; /*alterando profundidade do header*/
+}
+
+.footer li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.footer li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffff;
+    transition: color 0.2s ease;  
+}
+
+.footer strong {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #ffff;
+}
+
+.footer div img { 
+    float: left;
+}
+
+.footer .menu-footer {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.menu-pagamentos {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+ .menu-imagens {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-left: 20px;
+ }
+ 
+ .menu-imagens img {
+    margin: 10px 0;
+    width: 100px;
+ }
+
+.pagamentos-img {
+    display: flex;
+    margin-top: 15px;
+}
+
+.menu-pagamento img {
+    margin-top: 0 !important;
+}
+
+.menu-pagamento p {
+    color: #ffff;
+    align-items: right;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.menu-institucional p {
+    align-items: center;
+}
+
+.tekoa-brasil p {
+    color: #ffff;
+    margin-top: 15px;
+} 

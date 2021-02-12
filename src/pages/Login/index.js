@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import './styles.css';
-import logo from '../../assets/logo.svg';
 
 import api from '../../services/api';
 import { useAuth } from '../../contexts/auth';
@@ -36,11 +35,10 @@ export default function Login() {
 
     return (
         <div className="login-container">
-        <img src={logo} alt="AirCnc" />
 
         <div className="login-content">
         <p>
-            Entrar na conta
+          <b>Entrar na conta</b>
         </p>
 
         <form onSubmit={handleSubmit}>
@@ -64,6 +62,7 @@ export default function Login() {
           />
 
           <button className="btn" type="submit">Entrar</button>
+          <Link to="/criar-usuario"><button className="btn">Cadastre-se</button></Link>
         </form>
       </div>
     </div>

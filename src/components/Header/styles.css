@@ -8,7 +8,8 @@
   opacity: 0.9;
   position: -webkit-sticky; /* Necessário para funcionar no Safari */
   position: sticky;
-  top: 0
+  top: 0;
+  z-index: 5; /*alterando profundidade do header*/
 }
 
 .cabecalho img {
@@ -20,26 +21,45 @@
   height: 83px;
 }
 
+#menu {
+  padding-bottom: 10px;
+}
+
 #menu ul {
   padding: 0px;
   margin: 0px;
   list-style: none;
   justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 #menu ul li {
-  padding: 6px 50px;
+  padding: 12px;
   display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;  
+}
 
+#menu ul li +li {
+  margin-left: 30px;
+}
+
+#menu ul li a {
+  text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   color: #005B27;
-  text-decoration: none;
-  border-bottom:3px solid #EDEDED;
-    
+  transition: color 0.2s ease;  
 }
 
-#menu ul li:hover {
-  color: #01441e;
-  cursor: pointer;
+#menu ul li:hover, 
+#menu ul li.active {
+  background: #005B27;
+}
+
+#menu ul li:hover a,
+#menu ul li.active a {
+  color:#ffff;
 }

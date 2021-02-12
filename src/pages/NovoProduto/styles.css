@@ -16,7 +16,7 @@
 }
 
 .novo-produto-content > p {
-    font-size: 22px;
+    font-size: 25px;
     line-height: 30px;
     font-weight: bold;
 }
@@ -37,11 +37,12 @@ label#foto {
     border: 1px dashed #ddd;
     background-size: cover;
     cursor: pointer;
-    height: 160px;
+    height: 550px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
 }
 
 label#foto input {

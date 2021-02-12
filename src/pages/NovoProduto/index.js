@@ -21,20 +21,37 @@ export default function NovoProduto() {
         event.preventDefault();
         const formData = new FormData();
         formData.append('fotos', foto);
+        formData.append('nome', nome);
+        formData.append('descricao', descricao);
+        formData.append('cor', cor);
+        formData.append('tamanho', tamanho);
+        formData.append('preco', preco);
     
-        const response = await api.post('/produtos', {
-          ...formData,
-          nome,
-          descricao,
-          cor,
-          tamanho,
-          preco
-        },
-        {
-            
-          },);
-    
-        console.log(response);
+        //chamada para a api
+        const response = await api.post(
+            'produtos',
+            formData,
+            {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+              },
+            },
+          );
+        if (response.data){
+            alert(`Novo produto: ${response.data.produto.nome} cadastrado com sucesso!`);
+            clearFields(); //chamando função
+        } else {
+            alert("Erro ao cadastrar produto!");
+        }
+      }
+
+      function clearFields(){
+        setFoto(null);
+        setNome('');
+        setDescricao('');
+        setCor('');
+        setTamanho('');
+        setPreco('');
       }
 
     return (

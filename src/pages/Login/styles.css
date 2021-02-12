@@ -16,7 +16,7 @@
   }
   
    .login-content > p {
-    font-size: 22px;
+    font-size: 25px;
     line-height: 30px;
     margin-bottom: 30px;
   }
@@ -51,8 +51,10 @@
     font-size: 16px;
     font-weight: bold;
     background: #014408;
-    color: #fff;
+    color: #fff !important;
     cursor: pointer;
+    margin: 5px 0;
+    text-decoration: none;
   }
   
    .login-content button.btn:hover {
