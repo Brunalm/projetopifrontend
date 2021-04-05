@@ -20,7 +20,15 @@ function CriarUsuario() {
       senha
     });
 
-    console.log(response);
+    alert("Usuário criado com sucesso!")
+    clearFields();
+  }
+
+  function clearFields(){
+    setNome('');
+    setSobrenome('');
+    setEmail('');
+    setSenha('');
   }
 
   return (

@@ -12,6 +12,7 @@ import DetalhesProduto from './pages/DetalhesProduto';
 import NovoProduto from './pages/NovoProduto';
 import Home from './pages/Home';
 import Carrinho from './pages/Carrinho';
+import FinalizarCompra from './pages/FinalizarCompra';
 
 export default function Routes() {
     return (
@@ -24,6 +25,7 @@ export default function Routes() {
                 <Route path="/produtos" exact component={Produto} />
                 <Route path="/carrinho" component={Carrinho} />
                 <Route path="/produtos/:id" component={DetalhesProduto} />
+                <PrivateRoute path="/finalizar-compra" component={FinalizarCompra} />
                 <PrivateRoute path="/criar-produto" component={NovoProduto} />
             </Switch>
         <Footer />

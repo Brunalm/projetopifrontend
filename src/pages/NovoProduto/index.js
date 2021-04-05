@@ -113,11 +113,7 @@ export default function NovoProduto() {
                     value={preco}
                     onChange={event => setPreco(event.target.value)}
                 />
-
                 <button type="submit" className="btn">Cadastrar Produto</button>
-                <script>
-                    
-                </script>
             </form>
         </div>
         </div>

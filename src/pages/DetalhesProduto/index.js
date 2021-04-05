@@ -6,34 +6,18 @@ import api from '../../services/api';
 import './styles.css';
 
 import FotosProduto from '../../components/FotosProduto';
+import { useCarrinho } from '../../hooks/useCarrinho';
 
 export default function DetalhesProduto() {
     const params = useParams();
+    const carrinho = useCarrinho();
 
     const [produto, setProduto] = useState(null);
 
-    async function adicionarCarrinho(e) {
+    function adicionarCarrinho(e) {
         e.preventDefault();
-
-        // busco o objeto de carrinho dentro do local storage
-        const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-        // verificamos se o produto já existe no carrinho
-        const index = carrinho.findIndex(produtoCarrinho => produtoCarrinho.id === produto.id);
-
-        console.log(index);
-        // caso ele ja exista acrescentamos a quantidade nele
-        // caso nao exista criamos ele com quantidade 1
-        if (index >= 0) {
-            carrinho[index].quantidade += 1;
-        } else {
-            carrinho.push({
-                ...produto,
-                quantidade: 1,
-            });
-        }
-
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        
+        carrinho.adicionarItem(produto);
 
         alert('Produto adicionado ao carrinho');
     }

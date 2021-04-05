@@ -20,7 +20,7 @@
 .fotos-produto-container .foto-atual-container img.foto-atual {
     width: 420px;
     height: 500px;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .fotos-produto-container .foto-atual-container button {

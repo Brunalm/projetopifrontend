@@ -1,0 +1,109 @@
+.finalizar-compra-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.finalizar-compra-container > div {
+    width: calc(100% / 4);
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.finalizar-compra-container > div form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.finalizar-compra-container > div p {
+    font-size: 18px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #014408;
+}
+
+.finalizar-compra-container > div form label {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 1px;
+}
+
+.finalizar-compra-container > div form input {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    height: 35px;
+    width: 230px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.finalizar-compra-container > div form select {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    height: 35px;
+    width: 230px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.confirmar-compra {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    width: 230px;
+}
+
+.btnConfirmaCompra:hover {
+    background: #013005;
+}
+
+.ir-para {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: #014408;
+    text-decoration: none;
+}
+
+.finalizar-produtos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.finalizar-produtos h4 {
+    font-weight: 500
+}
+
+div.text-spaced { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    border-top: solid 1px #444;
+}
+
+.resumo-footer h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500
+}
+
+.continuar-comprando {
+    margin-top: 10px;
+}
+
+
+
+
+
+

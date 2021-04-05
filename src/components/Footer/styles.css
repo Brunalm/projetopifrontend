@@ -51,6 +51,16 @@
     justify-items: flex-start;
 }
 
+
+.redes-sociais {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
 .menu-pagamentos {
     color: white;
     display: flex;

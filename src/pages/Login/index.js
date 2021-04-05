@@ -13,6 +13,8 @@ export default function Login() {
     const { user, login } = useAuth();
 
     const history = useHistory();
+    const location = useLocation();
+    console.log(location.state);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -24,14 +26,17 @@ export default function Login() {
         } else {
             login(response.data.usuario, response.data.token);
         }
-
     }
 
     useEffect(() => {
         if (user !== null) {
-            history.push('/produtos');
+          if (location.state && location.state.from) {
+            history.push(location.state.from)
+          } else {
+            history.push('/produtos')
+          }
         }
-    }, [user, history]);
+    }, [user, history, location]);
 
     return (
         <div className="login-container">

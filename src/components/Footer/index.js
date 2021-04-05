@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { AiOutlineInstagram, AiFillFacebook, AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
 
 import './styles.css';
 
@@ -24,7 +25,10 @@ export default function Footer() {
             </div>
             <div className="menu-footer menu-atendimento">
                 <strong>Atendimento</strong>
-                <li className={location.pathname==='/contato'?'active':undefined}><Link to="/contato">CONTATO</Link></li>
+                <div className="redes-sociais">
+            <AiOutlineInstagram size={20} color="#ffff"/><AiFillFacebook size={20} color="#ffff"/>
+            <AiOutlineWhatsApp size={20} color="#ffff"/><AiOutlineMail size={20} color="#ffff"/>
+            </div>
             </div>
             <div className="menu-footer menu-institucional">
                 <strong>Institucional</strong>

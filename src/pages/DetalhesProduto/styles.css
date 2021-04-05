@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: flex-start;
     padding: 0 80px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .detalhes-produto-container div {
@@ -31,8 +31,7 @@ body {
     font: inherit;
     vertical-align: baseline;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;  
 }
 
 .detalhes-produto-container div .direita {
